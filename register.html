@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Register</title>
+</head>
+
+<body class="bg-bg">
+    <!-- Header -->
+    <!-- top header -->
+    <div class="bg-primary py-[15px] ">
+        <div class="laptop:w-[1200px] m-auto">
+            <div class="flex laptop:justify-between items-center justify-center text-white">
+                <div class="laptop:flex hidden flex justify-between items-center gap-x-5">
+                    <div class="text-[#c6c6c6]  flex justart gap-x-5 between items-center gap-x-[10px]">
+                        <i class="text-lg fa fa-envelope"></i>
+                        <span class="font-medium">
+                            info@gmail.com
+                        </span>
+                    </div>
+                    <div class="text-[#c6c6c6] font-medium  flex justify-between items-center gap-x-[10px]">
+                        <i class="fa fa-phone"></i>
+                        <span>+0123-456-5678</span>
+                    </div>
+                </div>
+                <div class="text-[#c6c6c6] font-medium flex justify-between items-center">
+                    <span class="mr-3 laptop:block hidden">Follow us :</span>
+                    <ul class="flex justify-between items-center gap-x-2 text-lg">
+                        <li class="inline-block flex-1 min-px-[5px]"><i class="fa fa-facebook-f"></i></li>
+                        <li class="inline-block px-[5px]"><i class="fa fa-youtube"></i></li>
+                        <li class="inline-block px-[5px]"><i class="fa fa-twitter"></i></li>
+                        <li class="inline-block px-[5px]"><i class="fa fa-instagram"></i></li>
+                        <li class="inline-block px-[5px]"><i class="fa fa-linkedin"></i></li>
+                    </ul>
+                    <div class="flex justify-between items-center gap-x-3 text-yellow ml-5">
+                        <a href="/">Login</a> <span class="text-white">/</span>
+                        <a href="/register.html">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="w-full h-auto relative z-10 sticky top-0 shadow-md">
+        <!-- main header -->
+        <div id="main_header" class="relative z-full w-full bg-bg ">
+            <div class="laptop:w-[1200px] w-full  m-auto">
+                <div class="flex justify-between items-center py-2 px-3">
+                    <div class="">
+                        <a href="/">
+                            <div class="w-[180px] h-[50px]"><img class="w-full h-full object-center object-cover"
+                                    src="/assets/images/image_icon/logo.png" alt="Logo"></div>
+                        </a>
+                    </div>
+
+                    <div class="flex justify-center items-center laptop:gap-x-0 gap-x-3">
+                        <button id="nav-btn-mobile"
+                            class="laptop:hidden block flex justify-center items-center gap-y-1 flex-col">
+                            <span class="transition-transform duration-250 w-[30px] inline-block h-1 bg-primary"></span>
+                            <span class="w-[30px] inline-block h-1 bg-primary"></span>
+                            <span class="transition-transform duration-250 w-[30px] inline-block h-1 bg-primary"></span>
+                        </button>
+                        <nav class="laptop:block hidden">
+                            <ul class="flex justify-center items-center">
+                                <li
+                                    class="p-[20px_15px_20px_15px] text-[15px] font-medium text-[#07294] uppercase transition-colors hover:text-yellow  duration-500 cursor-pointer">
+                                    home <i class="fa fa-angle-down"></i></li>
+                                <li
+                                    class="p-[20px_15px_20px_15px] text-[15px] font-medium text-[#07294] uppercase transition-colors hover:text-yellow  duration-500 cursor-pointer">
+                                    page <i class="fa fa-angle-down"></i></li>
+                                <li
+                                    class="p-[20px_15px_20px_15px] text-[15px] font-medium text-[#07294] uppercase transition-colors hover:text-yellow  duration-500 cursor-pointer">
+                                    courses <i class="fa fa-angle-down"></i></li>
+                                <li
+                                    class="p-[20px_15px_20px_15px] text-[15px] font-medium text-[#07294] uppercase transition-colors hover:text-yellow  duration-500 cursor-pointer">
+                                    events <i class="fa fa-angle-down"></i></li>
+                                <li
+                                    class="p-[20px_15px_20px_15px] text-[15px] font-medium text-[#07294] uppercase transition-colors hover:text-yellow  duration-500 cursor-pointer">
+                                    teachers <i class="fa fa-angle-down"></i></li>
+                                <li
+                                    class="p-[20px_15px_20px_15px] text-[15px] font-medium text-[#07294] uppercase transition-colors hover:text-yellow  duration-500 cursor-pointer">
+                                    blog <i class="fa fa-angle-down"></i></li>
+                                <li
+                                    class="p-[20px_15px_20px_15px] text-[15px] font-medium text-[#07294] uppercase transition-colors hover:text-yellow  duration-500 cursor-pointer">
+                                    shop <i class="fa fa-angle-down"></i></li>
+                                <li
+                                    class="p-[20px_15px_20px_15px] text-[15px] font-medium text-[#07294] uppercase transition-colors hover:text-yellow  duration-500 cursor-pointer">
+                                    contact <i class="fa fa-angle-down"></i></li>
+                            </ul>
+                        </nav>
+                        <div class="flex justify-center items-center gap-x-1">
+                            <button class="p-3 text-lg">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            <button class="p-3 text-lg relative">
+                                <i class="fa fa-shopping-bag"></i>
+                                <span
+                                    class="absolute top-0 right-0 w-5 h-5 rounded-full bg-yellow inline-block text-sm text-white">1</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header For mobile-->
+            <div id="nav-mobile" class="laptop:hidden hidden absolute z-full top-full left-0 w-full h-full">
+                <div class="w-full h-full ">
+                    <ul class="flex justify-start flex-col items-start p-4 bg-white">
+                        <li
+                            class="border-t border-[#cecece] w-full flex justify-between items-center py-4 text-[15px] font-semibold text-[#07294] uppercase transition-colors hover:text-yellow  duration-500 cursor-pointer">
+                            home <i class="fa fa-plus px-2 text-gray-500"></i></li>
+                        <li
+                            class="border-t border-[#cecece] w-full flex justify-between items-center py-4 text-[15px] font-semibold text-[#07294] uppercase transition-colors hover:text-yellow  duration-500 cursor-pointer">
+                            page <i class="fa fa-plus px-2 text-gray-500"></i></li>
+                        <li
+                            class="border-t border-[#cecece] w-full flex justify-between items-center py-4 text-[15px] font-semibold text-[#07294] uppercase transition-colors hover:text-yellow  duration-500 cursor-pointer">
+                            courses <i class="fa fa-plus px-2 text-gray-500"></i></li>
+                        <li
+                            class="border-t border-[#cecece] w-full flex justify-between items-center py-4 text-[15px] font-semibold text-[#07294] uppercase transition-colors hover:text-yellow  duration-500 cursor-pointer">
+                            events <i class="fa fa-plus px-2 text-gray-500"></i></li>
+                        <li
+                            class="border-t border-[#cecece] w-full flex justify-between items-center py-4 text-[15px] font-semibold text-[#07294] uppercase transition-colors hover:text-yellow  duration-500 cursor-pointer">
+                            teachers <i class="fa fa-plus px-2 text-gray-500"></i></li>
+                        <li
+                            class="border-t border-[#cecece] w-full flex justify-between items-center py-4 text-[15px] font-semibold text-[#07294] uppercase transition-colors hover:text-yellow  duration-500 cursor-pointer">
+                            blog <i class="fa fa-plus px-2 text-gray-500"></i></li>
+                        <li
+                            class="border-t border-[#cecece] w-full flex justify-between items-center py-4 text-[15px] font-semibold text-[#07294] uppercase transition-colors hover:text-yellow  duration-500 cursor-pointer">
+                            shop <i class="fa fa-plus px-2 text-gray-500"></i></li>
+                        <li
+                            class="border-t border-[#cecece] w-full flex justify-between items-center py-4 text-[15px] font-semibold text-[#07294] uppercase transition-colors hover:text-yellow  duration-500 cursor-pointer">
+                            contact <i class="fa fa-plus px-2 text-gray-500"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Form -->
+
+    <div class="laptop:py-24">
+        <form id="form" class="laptop:w-[75%] mx-auto w-full px-4 bg-white shadow-md laptop:px-20 py-12">
+            <div class="w-full h-full flex justify-center items-center flex-col laptop:flex-row laptop:gap-x-10">
+                <div class="flex flex-col justify-start items-start w-full laptop:flex-1">
+                    <label class="text-primary font-semibold my-4" for="fname">First Name</label>
+                    <input type="text" name="fname" id="fname" required="true" placeholder="First Name"
+                        class="w-full px-4 py-2 text-gray-700 focus:outline-none rounded border border-[#cecece]">
+                    <label class="text-primary font-semibold my-4" for="username">User Name</label>
+                    <input type="text" name="username" id="username" required="true" placeholder="User Name"
+                        class="w-full px-4 py-2 text-gray-700 focus:outline-none rounded border border-[#cecece]">
+                    <label class="text-primary font-semibold my-4" for="password">Password</label>
+                    <input type="password" name="password" id="password" required="true" placeholder="Password"
+                        class="w-full px-4 py-2 text-gray-700 focus:outline-none rounded border border-[#cecece]">
+                </div>
+                <div class="flex flex-col justify-start items-start w-full laptop:flex-1">
+                    <label class="text-primary font-semibold my-4" for="lname">Last Name</label>
+                    <input type="text" name="lname" id="lname" required="true" placeholder="Last Name"
+                        class="w-full px-4 py-2 text-gray-700 focus:outline-none rounded border border-[#cecece]">
+                    <label class="text-primary font-semibold my-4" for="email">Email</label>
+                    <input type="email" name="email" id="email" required="true" placeholder="Email"
+                        class="w-full px-4 py-2 text-gray-700 focus:outline-none rounded border border-[#cecece]">
+                    <label class="text-primary font-semibold my-4" for="cpassword">Confirm Password</label>
+                    <input type="password" name="cpassword" id="cpassword" required="true"
+                        placeholder="Confirm Password"
+                        class="w-full px-4 py-2 text-gray-700 focus:outline-none rounded border border-[#cecece]">
+                </div>
+            </div>
+            <div class="mt-8 grid grid-items-end"><button type="submit"
+                    class="ml-auto px-8 leading-[36px] py-2 rounded bg-primary text-white font-semibold inline-block">Register</button>
+            </div>
+        </form>
+
+    </div>
+    <!-- Footer -->
+    <footer class="bg-[#07294d] w-full h-auto">
+        <div class="laptop:w-[1170px] mx-auto">
+            <div class="w-full h-full  laptop:px-0 px-4">
+                <div
+                    class="flex justify-center flex-col laptop:flex-row items-start gap-x-6 text-white py-12 laptop:py-20">
+                    <div class="w-full laptop:mt-0 mt-8 laptop:w-[400px]">
+                        <div class="inline-block"><img src="assets/images/image_icon/logo-2.png" alt=""></div>
+                        <p class="text-[15px] font-normal leading-[28px] mt-3">Gravida nibh vel velit auctor
+                            aliquetn
+                            quibibendum
+                            auci elit cons equat ipsutis sem nibh id elit.
+                            Duis sed odio sit amet
+                            nibh vulputate.</p>
+                        <ul class="flex justify-start items-center gap-x-2 text-lg mt-5">
+                            <li class="inline-block w-10 h-10 grid place-items-center rounded-full bg-[#021d3a]"><i
+                                    class="fa fa-facebook-f"></i>
+                            </li>
+                            <li class="inline-block w-10 h-10 grid place-items-center rounded-full bg-[#021d3a]"><i
+                                    class="fa fa-youtube"></i></li>
+                            <li class="inline-block w-10 h-10 grid place-items-center rounded-full bg-[#021d3a]"><i
+                                    class="fa fa-twitter"></i></li>
+                            <li class="inline-block w-10 h-10 grid place-items-center rounded-full bg-[#021d3a]"><i
+                                    class="fa fa-instagram"></i></li>
+                            <li class="inline-block w-10 h-10 grid place-items-center rounded-full bg-[#021d3a]"><i
+                                    class="fa fa-linkedin"></i></li>
+                        </ul>
+                    </div>
+                    <div class="w-full laptop:mt-0 mt-8 laptop:w-[300px]">
+                        <h6 class="font-bold text-lg">Sitemap</h6>
+                        <div class="grid grid-cols-2 mt-4">
+                            <ul>
+                                <li
+                                    class="transition-colors hover:text-yellow  duration-500 cursor-pointer px-3 py-2 flex justify-start items-center gap-x-2 text-[15px]">
+                                    <i class="text-yellow fa fa-angle-right"></i><span
+                                        class="transition-transform hover:translate-x-2">Home</span>
+                                </li>
+                                <li
+                                    class="transition-colors hover:text-yellow  duration-500 cursor-pointer px-3 py-2 flex justify-start items-center gap-x-2 text-[15px]">
+                                    <i class="text-yellow fa fa-angle-right"></i><span
+                                        class="transition-transform hover:translate-x-2">About us</span>
+                                </li>
+                                <li
+                                    class="transition-colors hover:text-yellow  duration-500 cursor-pointer px-3 py-2 flex justify-start items-center gap-x-2 text-[15px]">
+                                    <i class="text-yellow fa fa-angle-right"></i><span
+                                        class="transition-transform hover:translate-x-2">Courses</span>
+                                </li>
+                                <li
+                                    class="transition-colors hover:text-yellow  duration-500 cursor-pointer px-3 py-2 flex justify-start items-center gap-x-2 text-[15px]">
+                                    <i class="text-yellow fa fa-angle-right"></i><span
+                                        class="transition-transform hover:translate-x-2">News</span>
+                                </li>
+                                <li
+                                    class="transition-colors hover:text-yellow  duration-500 cursor-pointer px-3 py-2 flex justify-start items-center gap-x-2 text-[15px]">
+                                    <i class="text-yellow fa fa-angle-right"></i><span
+                                        class="transition-transform hover:translate-x-2">Event</span>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li
+                                    class="transition-colors hover:text-yellow  duration-500 cursor-pointer px-3 py-2 flex justify-start items-center gap-x-2 text-[15px]">
+                                    <i class="text-yellow fa fa-angle-right"></i><span
+                                        class="transition-transform hover:translate-x-2">Home</span>
+                                </li>
+                                <li
+                                    class="transition-colors hover:text-yellow  duration-500 cursor-pointer px-3 py-2 flex justify-start items-center gap-x-2 text-[15px]">
+                                    <i class="text-yellow fa fa-angle-right"></i><span
+                                        class="transition-transform hover:translate-x-2">About
+                                        us</span>
+                                </li>
+                                <li
+                                    class="transition-colors hover:text-yellow  duration-500 cursor-pointer px-3 py-2 flex justify-start items-center gap-x-2 text-[15px]">
+                                    <i class="text-yellow fa fa-angle-right"></i><span
+                                        class="transition-transform hover:translate-x-2">Courses</span>
+                                </li>
+                                <li
+                                    class="transition-colors hover:text-yellow  duration-500 cursor-pointer px-3 py-2 flex justify-start items-center gap-x-2 text-[15px]">
+                                    <i class="text-yellow fa fa-angle-right"></i><span
+                                        class="transition-transform hover:translate-x-2">News</span>
+                                </li>
+                                <li
+                                    class="transition-colors hover:text-yellow  duration-500 cursor-pointer px-3 py-2 flex justify-start items-center gap-x-2 text-[15px]">
+                                    <i class="text-yellow fa fa-angle-right"></i><span
+                                        class="transition-transform hover:translate-x-2">Event</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="w-full laptop:mt-0 mt-8 laptop:w-[200px]">
+                        <h6 class="font-bold text-lg">Support</h6>
+                        <ul class="mt-4">
+                            <li
+                                class="transition-colors hover:text-yellow  duration-500 cursor-pointer px-3 py-2 flex justify-start items-center gap-x-2 text-[15px]">
+                                <i class="text-yellow fa fa-angle-right"></i><span
+                                    class="transition-transform hover:translate-x-2">Home</span>
+                            </li>
+                            <li
+                                class="transition-colors hover:text-yellow  duration-500 cursor-pointer px-3 py-2 flex justify-start items-center gap-x-2 text-[15px]">
+                                <i class="text-yellow fa fa-angle-right"></i><span
+                                    class="transition-transform hover:translate-x-2">About
+                                    us</span>
+                            </li>
+                            <li
+                                class="transition-colors hover:text-yellow  duration-500 cursor-pointer px-3 py-2 flex justify-start items-center gap-x-2 text-[15px]">
+                                <i class="text-yellow fa fa-angle-right"></i><span
+                                    class="transition-transform hover:translate-x-2">Courses</span>
+                            </li>
+                            <li
+                                class="transition-colors hover:text-yellow  duration-500 cursor-pointer px-3 py-2 flex justify-start items-center gap-x-2 text-[15px]">
+                                <i class="text-yellow fa fa-angle-right"></i><span
+                                    class="transition-transform hover:translate-x-2">News</span>
+                            </li>
+                            <li
+                                class="transition-colors hover:text-yellow  duration-500 cursor-pointer px-3 py-2 flex justify-start items-center gap-x-2 text-[15px]">
+                                <i class="text-yellow fa fa-angle-right"></i><span
+                                    class="transition-transform hover:translate-x-2">Event</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-full laptop:mt-0 mt-8 laptop:w-[300px]">
+                        <h6 class="font-bold text-lg">Contact Us</h6>
+                        <ul class="mt-4">
+                            <li class="px-3 py-2 flex justify-start items-start gap-x-5 gap-x-2 text-[15px]"></li>
+                            <span>143 castle road 517 district,
+                                kiyev
+                                port south Canada</span>
+                            </li>
+                            <li
+                                class="transition-colors hover:text-yellow  duration-500 cursor-pointer px-3 py-1 mt-3 flex justify-start items-start gap-x-5 gap-x-2 text-[15px]">
+                                <i class="text-lg fa fa-phone"></i></i><span
+                                    class="transition-transform hover:translate-x-2">+3 123 456 789
+                                    us</span>
+                            </li>
+                            <li
+                                class="transition-colors hover:text-yellow  duration-500 cursor-pointer px-3 py-1 flex justify-start items-start gap-x-5 gap-x-2 text-[15px]">
+                                <i class="text-lg fa fa-envelope-o"></i><span
+                                    class="transition-transform hover:translate-x-2">info@yourmail.com</span>
+                            </li>
+                            <li
+                                class="transition-colors hover:text-yellow  duration-500 cursor-pointer px-3 py-1 flex justify-start items-start gap-x-5 gap-x-2 text-[15px]">
+                                <i class="text-lg fa fa-globe"></i><span
+                                    class="transition-transform hover:translate-x-2">yourdomain.com</span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="bg-dark_primary text-white">
+            <div
+                class="laptop:w-[1170px] mx-auto flex justify-center laptop:justify-between items-center py-6 text-sm text-[#021d3]">
+                <span>© Copyrights 2020
+                    Edubin All rights reserved.</span>
+                <div class="laptop:block hidden">
+                    <span>Language</span><span> | </span><span>Language</span><span> |
+                    </span><span>Language</span><span> | </span><span>Language</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="/js/register.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: "#07294d",
+                    dark_primary: "#021d3a",
+                    light_primary: "#092e56",
+                    yellow: "#ffc600",
+                    bg: "#fbfbfb",
+                    blue: "#007bff",
+                    red: "#dc3545",
+                    green: "#28a745",
+
+                },
+                screens: {
+                    'tablet': '640px',
+                    // => @media (min-width: 640px) { ... }
+                    'laptop': '1280px',
+                    // => @media (min-width: 1280px) { ... }
+                },
+            },
+
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,14 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.active span:nth-child(1){
+    transform: rotate(45deg) translateX(5px);
+}
+.active span:nth-child(3) {
+    
+    transform: rotate(-45deg) translateX(5px);
+}
+.active span:nth-child(2){
+    display: none;
+}
