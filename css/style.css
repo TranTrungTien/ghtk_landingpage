@@ -13,6 +13,30 @@ body{
     display: none;
 }
 
+.translate{
+    display: inline-block;
+    transform: translateX(-100%);
+}
+
+.translate_back {
+    animation: translated 0.8s ease-in-out 1 forwards;
+}
+
+.translate_back:nth-child(1){
+    animation-delay: 0;
+}
+.translate_back:nth-child(2) {
+    animation-delay: 150ms;
+}
+.translate_back:nth-child(3) {
+    animation-delay: 300ms;
+}
+@keyframes translated {
+    to {
+        transform: translateX(0%);
+    }
+}
+
 /* .wave::after {
     content: "";
     position: absolute;

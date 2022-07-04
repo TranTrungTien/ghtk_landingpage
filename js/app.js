@@ -58,12 +58,12 @@ window.addEventListener("DOMContentLoaded", () => {
         feedbackBtnList[i].classList.add("bg-white");
       }
     }
-    feedbackTranslated -= feedbackXUnit * 2 + 80;
 
     feedbackContainer.style.setProperty(
       "transform",
       `translateX(${feedbackTranslated + "px"})`
     );
+    feedbackTranslated -= feedbackXUnit * 2 + 80;
   }, 3000);
 
   // ads slider
@@ -71,12 +71,13 @@ window.addEventListener("DOMContentLoaded", () => {
   const adsContainer = document.querySelector(".ads-container");
   const adsBtnLeft = document.querySelector("#ads-btn-left");
   const adsBtnRight = document.querySelector("#ads-btn-right");
+  const totalAdsSlide = adsContainer.children;
   let adsUnit = adsContainer.firstElementChild.getBoundingClientRect().width;
-  let adsStep = 1;
+  let adsStep = 0;
   let adsTranslated = 0;
 
   adsBtnLeft.onclick = () => {
-    if (adsStep === 1) return;
+    if (adsStep === 0) return;
     console.log(adsStep);
     adsTranslated += adsUnit * 1;
     adsContainer.style.setProperty(
@@ -86,7 +87,7 @@ window.addEventListener("DOMContentLoaded", () => {
     --adsStep;
   };
   adsBtnRight.onclick = () => {
-    if (adsStep === 3) return;
+    if (adsStep === 2) return;
     console.log(adsStep);
     adsTranslated += adsUnit * -1;
     adsContainer.style.setProperty(
@@ -96,11 +97,20 @@ window.addEventListener("DOMContentLoaded", () => {
     ++adsStep;
   };
 
+  // first step
+  const translateElems = totalAdsSlide[0].querySelectorAll(
+    "[data-translate=true]"
+  );
+  for (let node of translateElems) {
+    console.log(node);
+    node.classList.add("translate_back");
+  }
+
   adsIntervalTimer = setInterval(() => {
     adsTranslated += adsUnit * -1;
-    if (adsStep === 3) {
+    if (adsStep === 2) {
       adsTranslated = 0;
-      adsStep = 1;
+      adsStep = 0;
     } else {
       ++adsStep;
     }
@@ -109,6 +119,24 @@ window.addEventListener("DOMContentLoaded", () => {
       "transform",
       `translateX(${adsTranslated + "px"})`
     );
+    for (let i = 0; i < 3; ++i) {
+      console.log(totalAdsSlide[i]);
+      if (i === adsStep) {
+        const translateElems = totalAdsSlide[i].querySelectorAll(
+          "[data-translate=true]"
+        );
+        for (let node of translateElems) {
+          node.classList.add("translate_back");
+        }
+      } else {
+        const translateElems = totalAdsSlide[i].querySelectorAll(
+          "[data-translate=true]"
+        );
+        for (let node of translateElems) {
+          node.classList.remove("translate_back");
+        }
+      }
+    }
   }, 3000);
 
   const categoryBtnLeft = document.querySelector("#category-btn-left");
@@ -291,5 +319,6 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 window.onbeforeunload = () => {
+  clearInterval(feedbackIntervalTimer);
   clearInterval(adsIntervalTimer);
 };
