@@ -102,7 +102,6 @@ window.addEventListener("DOMContentLoaded", () => {
     "[data-translate=true]"
   );
   for (let node of translateElems) {
-    console.log(node);
     node.classList.add("translate_back");
   }
 
@@ -120,7 +119,6 @@ window.addEventListener("DOMContentLoaded", () => {
       `translateX(${adsTranslated + "px"})`
     );
     for (let i = 0; i < 3; ++i) {
-      console.log(totalAdsSlide[i]);
       if (i === adsStep) {
         const translateElems = totalAdsSlide[i].querySelectorAll(
           "[data-translate=true]"
@@ -142,11 +140,13 @@ window.addEventListener("DOMContentLoaded", () => {
   const categoryBtnLeft = document.querySelector("#category-btn-left");
   const categoryBtnRight = document.querySelector("#category-btn-right");
   const categoryContainer = document.querySelector("#category-container");
+
+  const firstList = categoryContainer.querySelectorAll("[data-list='1']");
+
   let categoryXUnit =
     categoryContainer.firstElementChild.getBoundingClientRect().width;
   let categoryTranslated = 0;
   let categoryStep = 1;
-  const categoryLength = 6;
   categoryBtnLeft.onclick = () => {
     console.log(categoryTranslated);
     if (!categoryXUnit || Math.abs(categoryTranslated) === 0) return;
@@ -164,13 +164,24 @@ window.addEventListener("DOMContentLoaded", () => {
   };
   categoryBtnRight.onclick = () => {
     if (!categoryXUnit) return;
-    if (windowSize <= 390) isLast = categoryLength - categoryStep > 1;
-    else isLast = categoryLength - categoryStep > 2;
-    if (!categoryXUnit || !isLast) return;
+    if (windowSize <= 390)
+      isLast = categoryContainer.children.length - categoryStep < 2;
+    else isLast = categoryContainer.children.length - categoryStep < 3;
+    if (!categoryXUnit) return;
+    if (isLast) {
+      // Run forever....
+      // If we want translate it smoothly. We'll keep append items instead remove because removing items make ui work not as expected
+      // Must to cloned node because js'll override node if existed
+      const clonedNode = [];
+      firstList.forEach((node) => {
+        clonedNode.push(node.cloneNode(true));
+      });
+      categoryContainer.append(...clonedNode);
+      isLast = false;
+    }
     if (windowSize <= 390) {
       categoryTranslated -= categoryXUnit;
     } else categoryTranslated -= categoryXUnit + 20;
-    console.log(categoryTranslated);
     categoryContainer.style.setProperty(
       "transform",
       `translateX(${categoryTranslated + "px"})`
