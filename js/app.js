@@ -8,6 +8,29 @@ window.addEventListener("DOMContentLoaded", () => {
   let windowSize = window.innerWidth;
   window.onresize = () => (windowSize = window.innerWidth);
 
+  // Open popup
+  const adsVideoBtn = document.querySelector("#ads-video-btn");
+  const closeVideoBtn = document.querySelector("#close-video-btn");
+  const popup = document.querySelector("#popup");
+  const video = document.querySelector("video");
+
+  popup.onclick = (e) => {
+    if (e.target.tagName === "VIDEO") return;
+    else {
+      video.src = null;
+      popup.classList.add("hidden");
+    }
+  };
+  closeVideoBtn.onclick = () => {
+    video.src = null;
+    popup.classList.add("hidden");
+  };
+  adsVideoBtn.onclick = () => {
+    popup.classList.remove("hidden");
+    video.src = "assets/video/video_253.mp4";
+    video.autoplay = true;
+  };
+
   //   feedback slider
   const maxFeedback = 3;
   let feedbackStep = 0;

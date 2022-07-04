@@ -16,7 +16,7 @@
     <title>Courses</title>
 </head>
 
-<body>
+<body class="relative">
     <div id="root" class="">
         <!-- Header -->
         <!-- top header -->
@@ -508,7 +508,8 @@
 
                     <div
                         class="laptop:flex-1 group text-center laptop:static absolute top-10 right-1/2 translate-x-1/2 laptop:translate-x-0">
-                        <button class="w-20 h-20 rounded-full bg-yellow text-white grid place-items-center text-2xl"><i
+                        <button id="ads-video-btn"
+                            class="wave relative w-20 h-20 rounded-full bg-yellow text-white grid place-items-center text-2xl"><i
                                 class="fa fa-play"></i></button>
                     </div>
                     <div class="laptop:max-w-[50%] w-full">
@@ -1236,12 +1237,34 @@
         class="fixed bottom-10 right-10 w-10 h-10 grid place-items-center bg-yellow text-2xl rounded-full text-primary">
         <i class="fa fa-angle-up mb-1"></i>
     </button>
+    <div id="popup" data-type="can-close" class="fixed hidden top-0 left-0 z-50 w-full h-screen bg-[rgba(0,0,0,0.8)]">
+        <div class="relative w-full h-full grid place-items-center">
+            <div class="relative h-[60%]">
+                <button class="absolute -top-8 -right-8 text-white text-2xl" id="close-video-btn"><i
+                        class="fa fa-times"></i></button>
+                <video src="" class="aspect-video h-full rounded object-center" loop="true" controls="true"></video>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
     tailwind.config = {
         theme: {
             extend: {
+                animation: {
+                    shadow_effect: "shadow_effect 0.5s linear infinite",
+                },
+                keysframes: {
+                    shadow_effect: {
+                        // from :{
+                        //     ""
+                        // }
+                        // to: {
+                        //     "box-shadow": "0 0 0 5px #333, 0 0 0 15px #555, 0 0 0 25px #aaa, 0 0 0 40px #fff"
+                        // }
+                    }
+                },
                 colors: {
                     primary: "#07294d",
                     dark_primary: "#021d3a",
